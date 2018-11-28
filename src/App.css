@@ -1,0 +1,61 @@
+/* Common strategy to allow content scrolling with a fixed navigation */
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  Layout framework missing and compensated with these styles.
+    To inline CSS it's a bad practice for web sites due lack of minification and gzip.
+    It's also not wise to skip linting, use of global variables, auto-prefixes, etc.. 
+  */
+.Content {
+  display: flex;
+  flex-grow: 1;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Dropdown {
+  width: 200px
+}
+
+.Navbar {
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.Hero {
+  height: 70vh;
+  min-height: 300px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.Hero__video {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.Section {
+  text-align: center;
+  margin-top: 50px; 
+}
+
+/* FIXME: Create theme modification or replace with provided utility withStyles */
+.ButtonOutline {
+  border-color: currentColor!important;
+}
+
+.ButtonPadding {
+  padding: 0 50px!important;
+}
